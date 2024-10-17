@@ -1,0 +1,78 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: .8rem;
+  justify-content: space-between;
+}
+
+.userCard-header {
+  display: flex;
+  align-items: center;
+  gap: 4px
+}
+
+.userCard-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 1000px;
+}
+
+.userCard-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.userCard-infoUserName {
+  opacity: .6;
+}
+
+
+.userCard-tag {
+  cursor: pointer;
+  margin-left: 16px;
+  border: 0;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-weight: bold;
+  border: 1px solid #000;
+  transition: .3s ease background-color;
+}
+
+.userCard-tag:hover {
+  opacity: .8;
+}
+
+.userCard-button.is-open {
+  border: 1px solid #bbb;
+  background: transparent;
+  color: #fff;
+  width: 140px;
+}
+
+.userCard-button.is-open:hover {
+  background-color: rgba(255, 0, 0, 0.178);
+  color: red;
+  border: 1px solid red;
+  transition: .3s ease all;
+  opacity: 1;
+}
+
+.userCard-button.is-open:hover .userCard-text {
+  display: none;
+}
+
+.userCard-button.is-open:hover .userCard-stopFollow {
+  display: block;
+}
+
+.userCard-stopFollow {
+  display: none;
+}
