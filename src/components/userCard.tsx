@@ -1,28 +1,30 @@
 import { Seller } from "../models/User";
 
 interface Props {
-  user: Seller
+  user: Seller,
+  index: number,
 }
 
-export const UserCard = ({ user }: Props) => {
+export const UserCard = ({ user, index }: Props) => {
   return (
-    <section className="userCard">
-      <header className="userCard-header">
+    <div className="userCard" data-testid={`cy-usercard-${index}`}>
+      <header className="userCard-header" data-testid="cy-card-header">
         <img
           className="userCard-avatar"
           alt="avatar"
           src={`https://unavatar.io/${user.id}`}
+          data-testid="cy-card-avatar"
         />
         <div className="userCard-info">
-          <strong>{user.name}</strong>
-          <span className="userCard-infoUserName">{user.location}</span>
+          <strong data-testid="cy-card-info">{user.name}</strong>
+          <span className="userCard-infoUserName" data-testid="cy-card-location">{user.location}</span>
         </div>
       </header>
       <aside>
-        <strong className="userCard-tag">
+        <strong className="userCard-tag" data-testid="cy-card-tag">
           {user.status}
         </strong>
       </aside>
-    </section>
+    </div>
   );
 };

@@ -8,10 +8,11 @@ interface Props {
 export const UserList = ({ users }: Props) => {
   return (
     <section>
+      <h1 className='userCard-title' data-testid="cy-card-title">List of sellers</h1>
       {
         users.map((user, index) => {
           return (
-            <UserCard user={user} key={index}/>
+            <UserCard user={user} index={index} key={index}/>
           )
         })
       }

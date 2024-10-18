@@ -5,22 +5,23 @@ import { Seller } from './models/User'
 
 function App() {
   const [sellers, setSellers] = useState<Seller[]>([])
+  
+  const fetchPost = async () => {
+    try {
+      const response = await fetch('http://localhost:4003/sellers');
+      const data = await response.json();
+      setSellers(data);
+    } catch (error) {
+      console.log('Error getting sellers... check if Node app is running');
+    }
+ };
 
-  useEffect(()=>{
-    fetch('http://localhost:4003/sellers')
-    .then((response) => response.json())
-         .then((data) => {
-            console.log(data);
-            setSellers(data);
-         })
-         .catch((err) => {
-            console.log(err.message);
-         });
+  useEffect(() => {
+   fetchPost();
   }, [])
 
   return (
     <>
-    <h1 className='userCard-title'>List of sellers</h1>
       <UserList users={sellers}/>
     </>
   )
