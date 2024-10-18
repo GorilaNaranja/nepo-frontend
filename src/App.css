@@ -5,12 +5,26 @@
   text-align: center;
 }
 
+.userCard-title {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #323232;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
 .userCard {
   display: flex;
   align-items: center;
   color: #fff;
   font-size: .8rem;
   justify-content: space-between;
+  background-color: #323232;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .userCard-header {

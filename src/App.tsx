@@ -20,6 +20,7 @@ function App() {
 
   return (
     <>
+    <h1 className='userCard-title'>List of sellers</h1>
       <UserList users={sellers}/>
     </>
   )
