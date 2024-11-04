@@ -1,4 +1,5 @@
 import { Seller } from "../models/User";
+// import { Filters } from "./Filters";
 import { UserCard } from "./userCard";
 
 interface Props {
